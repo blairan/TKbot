@@ -1,0 +1,11 @@
+--2023-08-05 10:10:38--  https://mirrors.tuna.tsinghua.edu.cn/github-raw/ros/rosdistro/master/rosdep/sources.list.d/20-default.list
+Resolving mirrors.tuna.tsinghua.edu.cn (mirrors.tuna.tsinghua.edu.cn)... 2402:f000:1:400::2, 101.6.15.130
+Connecting to mirrors.tuna.tsinghua.edu.cn (mirrors.tuna.tsinghua.edu.cn)|2402:f000:1:400::2|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 550 [application/octet-stream]
+Saving to: ‘/etc/ros/rosdep/sources.list.d/20-default.list’
+
+     0K                                                       100%  346M=0s
+
+2023-08-05 10:10:39 (346 MB/s) - ‘/etc/ros/rosdep/sources.list.d/20-default.list’ saved [550/550]
+
