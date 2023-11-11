@@ -1,0 +1,4 @@
+上位機的ros2_arduino_bridge
+如果電機使用減速比為30，一週期11個脈衝得到1320轉，
+要在/home/blairan_pi/tkbot_ws/src/ros2_arduino_bridge/params/arduino.yaml文件裡，
+encoder_resolution: 1320 #11x4x30(脈衝數x倍頻x減速比)修改一下
