@@ -11,7 +11,7 @@
    cd tkbot_ws
    . install/setup.bash
    ros2 launch tkbot_integrate tkbot_descript.launch.py
- </code></pre>
+  </code></pre>
  - pc終端機
   <pre>
    <code>
@@ -31,28 +31,34 @@
      cd tkbot_ws
      . install/setup.bash
      ros2 launch tkbot_cartographer cartographer.launch.py
-   </code></pre>
+    </code></pre>
   - pc終端機
-   <pre>
-    <code>
-     ros2 run teleop_twist_keyboard teleop_twist_keyboard
-    </code>
-   </pre>
-   - 建圖好後保存地圖
+    <pre><code>
+      ros2 run teleop_twist_keyboard teleop_twist_keyboard
+     </code></pre>
+  - 建圖好後保存地圖
      <pre><code>
       ros2 run nav2_map_server map_saver_cli -t maps -f nav
      </code></pre>
  # slam_gmapping建圖
   - 上位機第一個終端機
-   <pre><code>
-    cd tkbot_ws
-    . install/setup.bash
-    ros2 launch tkbot_integrate tkbot_descript.launch.py
-   </code></pre>
+    <pre><code>
+     cd tkbot_ws
+     . install/setup.bash
+     ros2 launch tkbot_integrate tkbot_descript.launch.py
+    </code></pre>
   - 上位機第二個終端
     <pre><code>
      cd tkbot_ws
      . install/setup.bash
     ros2 launch slam_gmapping slam_gmapping.launch.py
    </code></pre>
+  - pc端終端機
+    <pre><code>
+     ros2 run teleop_twist_keyboard teleop_twist_keyboard
+    </code></pre>
+  - 建圖好後保存地圖
+     <pre><code>
+      ros2 run nav2_map_server map_saver_cli -t maps -f nav
+     </code></pre>
   
