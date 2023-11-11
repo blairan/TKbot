@@ -8,27 +8,31 @@
 # 底盤測試
  - 上位終端機
   <pre><code>
-   $ cd tkbot_ws
-   $ . install/setup.bash
-   $ ros2 launch tkbot_integrate tkbot_descript.launch.py
+   cd tkbot_ws
+   . install/setup.bash
+   ros2 launch tkbot_integrate tkbot_descript.launch.py
  </code></pre>
  - pc終端機
   <pre>
    <code>
-     $ rviz2 #--1終端
-     $ ros2 run teleop_twist_keyboard teleop_twist_keyboard #2終端
+     rviz2 #--1終端
+     ros2 run teleop_twist_keyboard teleop_twist_keyboard #2終端
    </code>
   </pre>
  # 手持雷達建圖-catographer
   - 上位終端機
    <pre><code>
-    $ cd tkbot_ws
-    $ . install/setup.bash
-    $ ros2 launch tkbot_integrate tkbot_descript.launch.py
+    cd tkbot_ws
+    . install/setup.bash
+    ros2 launch tkbot_integrate tkbot_descript.launch.py
    </code></pre>
   - pc終端機
    <pre>
     <code>
-     $ ros2 launch tkbot_cartographer cartographer.launch.py
+     ros2 launch tkbot_cartographer cartographer.launch.py
     </code>
    </pre>
+   - 建圖好後保存地圖
+     <pre><code>
+      ros2 run nav2_map_server map_saver_cli -t maps -f nav
+     </code></pre>
