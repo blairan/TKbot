@@ -19,3 +19,16 @@
      $ ros2 run teleop_twist_keyboard teleop_twist_keyboard #2終端
    </code>
   </pre>
+ # 手持雷達建圖-catographer
+  - 上位終端機
+   <pre><code>
+    $ cd tkbot_ws
+    $ . install/setup.bash
+    $ ros2 launch tkbot_integrate tkbot_descript.launch.py
+   </code></pre>
+  - pc終端機
+   <pre>
+    <code>
+     $ ros2 launch tkbot_cartographer cartographer.launch.py
+    </code>
+   </pre>
