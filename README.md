@@ -47,12 +47,12 @@
      . install/setup.bash
      ros2 launch tkbot_integrate tkbot_descript.launch.py
     </code></pre>
-  - 上位機第二個終端
+  - 上位機第二個終端機
     <pre><code>
      cd tkbot_ws
      . install/setup.bash
-    ros2 launch slam_gmapping slam_gmapping.launch.py
-   </code></pre>
+     ros2 launch slam_gmapping slam_gmapping.launch.py
+    </code></pre>
   - pc端終端機
     <pre><code>
      ros2 run teleop_twist_keyboard teleop_twist_keyboard
