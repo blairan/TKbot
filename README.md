@@ -6,7 +6,7 @@
   - 下位機的電機減比要注意,可以參考下位機資料夾裡的"注意事項"
   - catographer和slam_gmapping，usb_cam功能包要另外自行下載再編譯;
 # 底盤測試
- - 上位終端機
+ - 機器人端－終端機
   <pre><code>
    cd tkbot_ws
    . install/setup.bash
@@ -20,13 +20,13 @@
    </code>
   </pre>
  # 手持雷達建圖-catographer
-  - 上位機#1終端機
+  - 機器人端－#1終端機
    <pre><code>
     cd tkbot_ws
     . install/setup.bash
     ros2 launch tkbot_integrate tkbot_descript.launch.py
    </code></pre>
-  - 上位機#2終端機
+  - 機器人端－#2終端機
     <pre><code>
      cd tkbot_ws
      . install/setup.bash
@@ -41,13 +41,13 @@
       ros2 run nav2_map_server map_saver_cli -t maps -f nav
      </code></pre>
  # slam_gmapping建圖
-  - 上位機第一個終端機
+  - 機器人端－第一個終端機
     <pre><code>
      cd tkbot_ws
      . install/setup.bash
      ros2 launch tkbot_integrate tkbot_descript.launch.py
     </code></pre>
-  - 上位機第二個終端機
+  - 機器人端－第二個終端機
     <pre><code>
      cd tkbot_ws
      . install/setup.bash
@@ -61,4 +61,10 @@
      <pre><code>
       ros2 run nav2_map_server map_saver_cli -t maps -f nav
      </code></pre>
+
+＃　yolo_ros
+ - 機器人端－終端機
+   <pre>
+    <code>ros2 run yolov5_ros2 yolo_detect_2d --ros-args -p device:=cpu -p image_topic:=/image -p pub_result_img:=True</code>
+   </pre>
   
