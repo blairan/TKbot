@@ -72,29 +72,29 @@
   - 關於pc端訂閱“result_img”主題
     -　建立一個工作空間，並建立節點，代碼如下：
     <pre><code>
-     #!/usr/bin/env python3
-import rclpy
-from rclpy.node import Node
-import cv2
-from cv_bridge import CvBridge, CvBridgeError
-from sensor_msgs.msg import Image
- 
-class sub_webcam(Node):
-    def __init__(self, name):
-        super().__init__(name)
-        self.get_logger().info("接收偵測數據！")
-        self.brige=CvBridge()
-
-    def callback(self, data): #回調
-        img2cv = self.brige.imgmsg_to_cv2(data, "bgr8") #接收到的訊息轉為cv2可讀的資訊
-        cv2.imshow("capture", img2cv)
-        cv2.waitKey(1)
-
-def main(args=None):
-    rclpy.init(args=args)
-    node=sub_webcam("sub_webcam") #創立一個節點
-    node.create_subscription(Image, "result_img", node.callback, 10)#建立視訊流話題，並用回調持續接收
-    rclpy.spin(node)
-    rclpy.shutdown()
+      #!/usr/bin/env python3
+      import rclpy
+      from rclpy.node import Node
+      import cv2
+      from cv_bridge import CvBridge, CvBridgeError
+      from sensor_msgs.msg import Image
+       
+      class sub_webcam(Node):
+          def __init__(self, name):
+              super().__init__(name)
+              self.get_logger().info("接收偵測數據！")
+              self.brige=CvBridge()
+      
+          def callback(self, data): #回調
+              img2cv = self.brige.imgmsg_to_cv2(data, "bgr8") #接收到的訊息轉為cv2可讀的資訊
+              cv2.imshow("capture", img2cv)
+              cv2.waitKey(1)
+      
+      def main(args=None):
+          rclpy.init(args=args)
+          node=sub_webcam("sub_webcam") #創立一個節點
+          node.create_subscription(Image, "result_img", node.callback, 10)#建立視訊流話題，並用回調持續接收
+          rclpy.spin(node)
+          rclpy.shutdown()
     </code></pre>
   
