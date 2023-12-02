@@ -40,6 +40,12 @@
      <pre><code>
       ros2 run nav2_map_server map_saver_cli -t maps -f nav
      </code></pre>
+ # 導航
+  - 機器人端
+    <pre><code>ros2 launch tkbot_integrate tkbot_descript.launch.py #--底盤
+ros2 launch tkbot_nav2 nav2.launch.py #--導航包</code></pre>
+  - 主機端
+    <pre><code>rviz2</code></pre>
  # slam_gmapping建圖
   - 機器人端－第一個終端機
     <pre><code>
