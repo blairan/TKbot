@@ -42,8 +42,8 @@
      </code></pre>
  # 導航
   - 機器人端
-    <pre><code>ros2 launch tkbot_integrate tkbot_descript.launch.py #--底盤
-               ros2 launch tkbot_nav2 nav2.launch.py #--導航包
+    <pre><code>ros2 launch tkbot_integrate tkbot_descript.launch.py #--底盤-終端1
+     ros2 launch tkbot_nav2 nav2.launch.py #--導航包-終端2
     </code></pre>
   - 主機端
     <pre><code>rviz2</code></pre>
