@@ -38,7 +38,7 @@
      </code></pre>
   - 建圖好後保存地圖
      <pre><code>
-      ros2 run nav2_map_server map_saver_cli -t maps -f nav
+      ros2 launch map_server map_server.launch.py 
      </code></pre>
  # slam_gmapping建圖
   - 機器人端－第一個終端機
@@ -59,7 +59,7 @@
     </code></pre>
   - 建圖好後保存地圖
      <pre><code>
-      ros2 run nav2_map_server map_saver_cli -t maps -f nav
+      ros2 launch map_server map_server.launch.py 
      </code></pre>
 # 導航
   - 機器人端
