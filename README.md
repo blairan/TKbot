@@ -51,7 +51,7 @@
     <pre><code>
      cd tkbot_ws
      . install/setup.bash
-     ros2 launch slam_gmapping slam_gmapping.launch.py
+     ros2 launch tkbot_slam_gmapping slam_gmapping.launch.py
     </code></pre>
   - pc端終端機
     <pre><code>
